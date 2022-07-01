@@ -9,6 +9,14 @@ name: Deploy to Firebase Hosting on merge
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_API_KEY: "${{ AIzaSyBKZEivJwqBZz6E5YzBeYcD9QgLD25y7Cw }}"
+      REACT_APP_AUTH_DOMAIN: "${{ fir-recipes-535be.firebaseapp.com }}"
+      REACT_APP_PROJECT_ID: "${{ fir-recipes-535be }}"
+      REACT_APP_STORAGE_BUCKET: "${{ fir-recipes-535be.appspot.com }}"
+      REACT_APP_MESSAGING_SENDER_ID: "${{ 505630904625 }}"
+      REACT_APP_APP_ID: "${{ 1:505630904625:web:6883b68a8430db605fe010 }}"
+      REACT_APP_MEASUREMENT_ID: "${{ G-T8CP2YWXJ6 }}"
     steps:
       - uses: actions/checkout@v2
       - run: npm install
